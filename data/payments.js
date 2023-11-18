@@ -1,0 +1,42 @@
+export default [
+  {
+    id: 1,
+    title: 'Rent',
+    categories: 'Home',
+    reminderSet: true,
+    date: '12/11/2023',
+    color: 'blue',
+  },
+  {
+    id: 2,
+    title: 'Electricity',
+    categories: 'Work',
+    reminderSet: false,
+    date: '13/12/2023',
+    color: 'yellow',
+  },
+  {
+    id: 3,
+    title: 'Car service',
+    categories: 'Car',
+    reminderSet: false,
+    date: '12/1/2024',
+    color: 'green',
+  },
+  {
+    id: 4,
+    title: 'Laundry',
+    categories: 'Clothes',
+    reminderSet: false,
+    date: '12/3/2024',
+    color: 'red',
+  },
+  {
+    id: 5,
+    title: 'Shopping',
+    categories: 'Home',
+    reminderSet: false,
+    date: '12/10/2024',
+    color: 'black',
+  },
+];

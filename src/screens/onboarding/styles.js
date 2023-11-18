@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
   button: {
     backgroundColor: '#6C63FF',
     borderRadius: 12,
-    width: windowWidth * 0.8,
+    width: windowWidth * 0.9,
     padding: 20,
     flexDirection: 'row',
     justifyContent: 'center',

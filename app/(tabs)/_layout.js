@@ -1,8 +1,7 @@
 import React from 'react';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Link, Tabs } from 'expo-router/tabs';
-import { Pressable } from 'react-native';
+import { Tabs } from 'expo-router/tabs';
 
 export default function TabsLayout() {
   return (
