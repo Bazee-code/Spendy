@@ -4,8 +4,12 @@ import Container from '../../../components/container';
 import onboarding from '../../../data/onboarding';
 import { windowHeight, windowWidth } from '../../configs/dimensions';
 import { styles } from './styles';
+import { router } from 'expo-router';
 
 const Onboarding = () => {
+  const handleHome = () => {
+    router.replace('/home');
+  };
   return (
     <Container>
       <FlatList
@@ -25,7 +29,7 @@ const Onboarding = () => {
             <Text style={styles.title}>{item?.title}</Text>
 
             {index === 2 ? (
-              <TouchableOpacity style={styles.button}>
+              <TouchableOpacity style={styles.button} onPress={handleHome}>
                 <Text style={styles.buttonText}>START</Text>
               </TouchableOpacity>
             ) : null}
