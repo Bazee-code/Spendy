@@ -1,5 +1,6 @@
 import React from 'react';
 import { AntDesign } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Link, Tabs } from 'expo-router/tabs';
 import { Pressable } from 'react-native';
 
@@ -24,7 +25,11 @@ export default function TabsLayout() {
         name="budget"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="home" size={size} color={color} />
+            <MaterialCommunityIcons
+              name="cards-outline"
+              size={size}
+              color={color}
+            />
           ),
           tabBarLabel: 'Budget',
         }}
@@ -33,7 +38,7 @@ export default function TabsLayout() {
         name="profile"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="home" size={size} color={color} />
+            <AntDesign name="user" size={size} color={color} />
           ),
           tabBarLabel: 'Profile',
         }}
@@ -42,7 +47,11 @@ export default function TabsLayout() {
         name="more"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="home" size={size} color={color} />
+            <MaterialCommunityIcons
+              name="dots-horizontal"
+              size={size}
+              color={color}
+            />
           ),
           tabBarLabel: 'More',
         }}
