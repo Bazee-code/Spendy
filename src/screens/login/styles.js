@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '600',
     width: windowWidth * 0.4,
+    marginTop: 10,
   },
   input: {
     color: '#667085',

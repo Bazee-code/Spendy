@@ -1,10 +1,6 @@
 import React from 'react';
-import Onboarding from '../src/screens/onboarding';
+import { Redirect } from 'expo-router';
 
 export default function index() {
-  return (
-    <>
-      <Onboarding />
-    </>
-  );
+  return <Redirect href={'/onboarding'} />;
 }

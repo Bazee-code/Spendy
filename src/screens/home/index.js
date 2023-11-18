@@ -5,7 +5,7 @@ import { styles } from './styles';
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>Home screen here</Text>
+      <Text>Home screen here bro</Text>
     </View>
   );
 };
