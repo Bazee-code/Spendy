@@ -8,7 +8,7 @@ import { router } from 'expo-router';
 
 const Onboarding = () => {
   const handleHome = () => {
-    router.replace('/home');
+    router.replace('/login');
   };
   return (
     <Container>
@@ -17,7 +17,7 @@ const Onboarding = () => {
         initialNumToRender={3}
         horizontal
         renderItem={({ item, index }) => (
-          <View style={styles.container}>
+          <View style={styles.container} key={item.id}>
             <Image
               source={item?.image}
               style={{

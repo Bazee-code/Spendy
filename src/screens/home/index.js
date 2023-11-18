@@ -1,14 +1,10 @@
 import { View, Text, SafeAreaView } from 'react-native';
 import React from 'react';
-import Container from '../../../components/container';
+import { styles } from './styles';
 
 const Home = () => {
   return (
-    <View
-      style={{
-        padding: 10,
-      }}
-    >
+    <View style={styles.container}>
       <Text>Home screen here</Text>
     </View>
   );
