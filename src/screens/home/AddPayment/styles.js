@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#6C63FF',
     padding: 20,
     borderRadius: 10,
-    marginTop: 10,
+    marginTop: 30,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
