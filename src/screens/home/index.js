@@ -1,12 +1,14 @@
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import React from 'react';
+import React, { useRef } from 'react';
 import { styles } from './styles';
 import { MaterialIcons } from '@expo/vector-icons';
 import payments from '../../../data/payments';
 import { windowHeight } from '../../configs/dimensions';
 import { Octicons } from '@expo/vector-icons';
+import CustomBottomSheet from '../../../components/bottomsheet';
 
 const Home = () => {
+  const bottomSheetRef = useRef(null);
   return (
     <>
       <View style={styles.container}>
@@ -38,7 +40,9 @@ const Home = () => {
               payments.map((payment, index) => (
                 <View key={payment.id} style={styles.paymentContainer}>
                   <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <View style={styles.dot} />
+                    <View
+                      style={[styles.dot, { backgroundColor: payment.color }]}
+                    />
                     <View>
                       <Text style={styles.paymentTitle}>{payment.title}</Text>
                       <Text style={styles.paymentCategory}>
@@ -69,6 +73,7 @@ const Home = () => {
       <TouchableOpacity style={styles.addButton}>
         <Octicons name="plus" size={24} color="#FFF" />
       </TouchableOpacity>
+      <CustomBottomSheet bottomSheetRef={bottomSheetRef} />
     </>
   );
 };

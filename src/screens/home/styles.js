@@ -49,7 +49,6 @@ export const styles = StyleSheet.create({
     height: 20,
     width: 20,
     borderRadius: 10,
-    backgroundColor: payment.color,
     marginRight: 10,
   },
   paymentTitle: {
