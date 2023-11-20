@@ -5,15 +5,35 @@ import {
   ScrollView,
   SafeAreaView,
 } from 'react-native';
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { styles } from './styles';
 import { MaterialIcons } from '@expo/vector-icons';
 import payments from '../../../data/payments';
-import { windowHeight } from '../../configs/dimensions';
+import { windowHeight, windowWidth } from '../../configs/dimensions';
 import { Octicons } from '@expo/vector-icons';
 import BottomSheet from '../../../components/bottomsheet';
+import { useSharedValue, withSpring } from 'react-native-reanimated';
+import { SPRING_CONFIG, SPRING_CONFIG2 } from '../../configs/constants';
 
 const HomeScreen = () => {
+  const [locationTop, setLocationTop] = useState(useSharedValue(windowHeight));
+  const [revertAnim, setRevertAnim] = useState(false);
+
+  const handlePress = (value) => {
+    (locationTop.value = withSpring(windowHeight / value)),
+      {
+        SPRING_CONFIG,
+      };
+    setRevertAnim(false);
+  };
+
+  const handleClose = (value) => {
+    (locationTop.value = withSpring(windowHeight / value)),
+      {
+        SPRING_CONFIG2,
+      };
+  };
+
   return (
     <>
       <>
@@ -83,12 +103,25 @@ const HomeScreen = () => {
               <View style={{ height: windowHeight * 0.5 }} />
             </ScrollView>
           </View>
-          <BottomSheet />
         </View>
 
-        <TouchableOpacity style={styles.addButton}>
+        <TouchableOpacity
+          style={styles.addButton}
+          onPress={() => handlePress(2)}
+        >
           <Octicons name="plus" size={24} color="#FFF" />
         </TouchableOpacity>
+        <BottomSheet
+          handlePress={handlePress}
+          handleClose={handleClose}
+          top={locationTop}
+          revertAnim={revertAnim}
+          setRevertAnim={setRevertAnim}
+        >
+          <View style={{ height: windowHeight }}>
+            <Text style={{ color: '#000' }}>Add payment here</Text>
+          </View>
+        </BottomSheet>
       </>
     </>
   );
