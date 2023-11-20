@@ -1,8 +1,9 @@
 import React from 'react';
 import { HomeBottomTabNavigator } from './src/navigation/BottomTabNavigator';
 import { NavigationContainer } from '@react-navigation/native';
+import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 
-const App = () => {
+const App = gestureHandlerRootHOC(() => {
   const myTheme = {
     colors: {
       background: '#FFF',
@@ -13,6 +14,6 @@ const App = () => {
       <HomeBottomTabNavigator />
     </NavigationContainer>
   );
-};
+});
 
 export default App;
