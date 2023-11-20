@@ -14,6 +14,7 @@ import { Octicons } from '@expo/vector-icons';
 import BottomSheet from '../../../components/bottomsheet';
 import { useSharedValue, withSpring } from 'react-native-reanimated';
 import { SPRING_CONFIG, SPRING_CONFIG2 } from '../../configs/constants';
+import AddPayment from './AddPayment';
 
 const HomeScreen = () => {
   const [locationTop, setLocationTop] = useState(useSharedValue(windowHeight));
@@ -107,7 +108,7 @@ const HomeScreen = () => {
 
         <TouchableOpacity
           style={styles.addButton}
-          onPress={() => handlePress(2)}
+          onPress={() => handlePress(3.8)}
         >
           <Octicons name="plus" size={24} color="#FFF" />
         </TouchableOpacity>
@@ -119,7 +120,7 @@ const HomeScreen = () => {
           setRevertAnim={setRevertAnim}
         >
           <View style={{ height: windowHeight }}>
-            <Text style={{ color: '#000' }}>Add payment here</Text>
+            <AddPayment />
           </View>
         </BottomSheet>
       </>

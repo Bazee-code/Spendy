@@ -14,9 +14,10 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    backgroundColor: '#16112B',
+    // backgroundColor: '#16112B',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+    backgroundColor: '#FFF',
   },
   sheetContainer: {
     position: 'absolute',
@@ -31,9 +32,10 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    backgroundColor: '#16112B',
+    // backgroundColor: '#16112B',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+    backgroundColor: '#FFF',
   },
   headerContainer: {
     flexDirection: 'column',
