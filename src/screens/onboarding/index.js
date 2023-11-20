@@ -6,7 +6,7 @@ import { windowHeight, windowWidth } from '../../configs/dimensions';
 import { styles } from './styles';
 import { router } from 'expo-router';
 
-const Onboarding = () => {
+const OnboardingScreen = () => {
   const handleHome = () => {
     router.replace('/login');
   };
@@ -44,4 +44,4 @@ const Onboarding = () => {
   );
 };
 
-export default Onboarding;
+export default OnboardingScreen;

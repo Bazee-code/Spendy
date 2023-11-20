@@ -1,11 +1,17 @@
-import { View, Text } from 'react-native';
 import React from 'react';
+import { HomeBottomTabNavigator } from './src/navigation/BottomTabNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
+  const myTheme = {
+    colors: {
+      background: '#FFF',
+    },
+  };
   return (
-    <View>
-      <Text>App here</Text>
-    </View>
+    <NavigationContainer theme={myTheme}>
+      <HomeBottomTabNavigator />
+    </NavigationContainer>
   );
 };
 

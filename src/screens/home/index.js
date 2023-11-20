@@ -7,7 +7,7 @@ import { windowHeight } from '../../configs/dimensions';
 import { Octicons } from '@expo/vector-icons';
 import BottomSheet from '../../../components/bottomsheet';
 
-const Home = () => {
+const HomeScreen = () => {
   return (
     <>
       <>
@@ -87,4 +87,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;

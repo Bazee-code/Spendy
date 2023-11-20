@@ -1,12 +1,11 @@
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { styles } from './styles';
-import { router } from 'expo-router';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-const Login = () => {
+const LoginScreen = () => {
   const handleLogin = () => {
-    router.replace('/(tabs)/home');
+    // navigate to home
   };
   return (
     <>
@@ -27,4 +26,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginScreen;
