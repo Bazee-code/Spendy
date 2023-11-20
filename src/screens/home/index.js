@@ -1,4 +1,10 @@
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  SafeAreaView,
+} from 'react-native';
 import React, { useRef } from 'react';
 import { styles } from './styles';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -11,6 +17,7 @@ const HomeScreen = () => {
   return (
     <>
       <>
+        <SafeAreaView style={{ flex: 1, backgroundColor: '#6C63FF' }} />
         <View style={styles.container}>
           <View style={styles.headerContainer}>
             <TouchableOpacity style={styles.header}>

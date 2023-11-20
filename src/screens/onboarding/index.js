@@ -1,14 +1,17 @@
 import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import Container from '../../../components/container';
 import onboarding from '../../../data/onboarding';
 import { windowHeight, windowWidth } from '../../configs/dimensions';
 import { styles } from './styles';
-import { router } from 'expo-router';
+import * as Routes from '../../navigation/Routes';
 
 const OnboardingScreen = () => {
+  const navigation = useNavigation();
+
   const handleHome = () => {
-    router.replace('/login');
+    navigation.replace(Routes.LOGIN_SCREEN);
   };
   return (
     <Container>

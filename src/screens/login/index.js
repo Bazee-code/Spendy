@@ -1,14 +1,24 @@
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  SafeAreaView,
+} from 'react-native';
 import React from 'react';
 import { styles } from './styles';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import * as Routes from '../../navigation/Routes';
 
 const LoginScreen = () => {
+  const navigation = useNavigation();
   const handleLogin = () => {
-    // navigate to home
+    navigation.replace(Routes.HOME_SCREEN);
   };
   return (
     <>
+      <SafeAreaView style={{ flex: 1 }} />
       <View style={styles.container}>
         <FontAwesome5 name="piggy-bank" size={50} color="#6C63FF" />
         <Text style={styles.title}>WELCOME TO SPENDY!</Text>
