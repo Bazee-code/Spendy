@@ -120,7 +120,7 @@ const HomeScreen = () => {
           setRevertAnim={setRevertAnim}
         >
           <View style={{ height: windowHeight }}>
-            <AddPayment />
+            <AddPayment handleClose={handleClose} />
           </View>
         </BottomSheet>
       </>
