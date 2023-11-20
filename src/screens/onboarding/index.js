@@ -35,7 +35,7 @@ const Onboarding = () => {
             ) : null}
           </View>
         )}
-        keyExtractor={({ index }) => index}
+        keyExtractor={(item) => item.id}
         bounces={false}
         pagingEnabled
         showsHorizontalScrollIndicator={false}

@@ -10,6 +10,7 @@ const Page = () => {
           headerShown: false,
         }}
       />
+
       <Home />
     </>
   );

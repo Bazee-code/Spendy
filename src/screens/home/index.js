@@ -135,6 +135,7 @@ const Home = () => {
           </ScrollView>
         </View>
       </View>
+
       <TouchableOpacity
         style={{
           position: 'absolute',
