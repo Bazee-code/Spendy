@@ -5,11 +5,7 @@ import React from 'react';
 import App from './App';
 
 const index = () => {
-  return (
-    <View>
-      <App />
-    </View>
-  );
+  return <App />;
 };
 
 export default index;
