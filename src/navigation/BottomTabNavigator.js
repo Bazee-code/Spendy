@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as Routes from './Routes';
-import { BudgetScreenStack, HomeScreenStack } from './StackNavigator';
+import {
+  BudgetScreenStack,
+  HomeScreenStack,
+  ProfileScreenStack,
+} from './StackNavigator';
 import Svg, { G, Path } from 'react-native-svg';
 import OnboardingScreen from '../screens/onboarding';
 import LoginScreen from '../screens/login';
@@ -78,7 +82,7 @@ export const BottomTabNavigator = () => {
       />
       <HomeTab.Screen
         name={Routes.PROFILE_TAB}
-        component={HomeScreenStack}
+        component={ProfileScreenStack}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color, size }) => (
