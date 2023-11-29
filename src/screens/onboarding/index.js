@@ -24,7 +24,7 @@ const OnboardingScreen = () => {
             <Image
               source={item?.image}
               style={{
-                height: windowHeight * 0.7,
+                height: windowHeight * 0.6,
                 width: windowWidth,
                 paddingHorizontal: 10,
               }}

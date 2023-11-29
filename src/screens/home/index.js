@@ -15,10 +15,15 @@ import BottomSheet from '../../../components/bottomsheet';
 import { useSharedValue, withSpring } from 'react-native-reanimated';
 import { SPRING_CONFIG, SPRING_CONFIG2 } from '../../configs/constants';
 import AddPayment from './AddPayment';
+import { CustomModal } from '../../../components/modal';
+import CustomCalendar from './Calendar';
 
 const HomeScreen = () => {
   const [locationTop, setLocationTop] = useState(useSharedValue(windowHeight));
   const [revertAnim, setRevertAnim] = useState(false);
+
+  const [visible, setVisible] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(null);
 
   const handlePress = (value) => {
     (locationTop.value = withSpring(windowHeight / value)),
@@ -35,13 +40,17 @@ const HomeScreen = () => {
       };
   };
 
+  const handleShow = () => {
+    setVisible(true);
+  };
+
   return (
     <>
       <>
         <SafeAreaView style={{ flex: 1, backgroundColor: '#6C63FF' }} />
         <View style={styles.container}>
           <View style={styles.headerContainer}>
-            <TouchableOpacity style={styles.header}>
+            <TouchableOpacity style={styles.header} onPress={handleShow}>
               <Text style={styles.headerText}>Today</Text>
               <MaterialIcons
                 name="keyboard-arrow-down"
@@ -123,6 +132,12 @@ const HomeScreen = () => {
             <AddPayment handleClose={handleClose} />
           </View>
         </BottomSheet>
+        <CustomModal visible={visible} setVisible={setVisible}>
+          <CustomCalendar
+            selectedDate={selectedDate}
+            setSelectedDate={setSelectedDate}
+          />
+        </CustomModal>
       </>
     </>
   );

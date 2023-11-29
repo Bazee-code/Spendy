@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Modal, TouchableOpacity, Animated, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import { View, Modal, TouchableOpacity, Animated } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 import { styles } from './styles';
 
 const ModalShow = ({ children, visible, setVisible }) => {
@@ -38,7 +38,7 @@ const ModalShow = ({ children, visible, setVisible }) => {
             }}
             style={styles.button}
           >
-            <Icon name="x" color="#FFF" size={20} />
+            <MaterialIcons name="cancel" size={30} color="#FFF" />
           </TouchableOpacity>
         </View>
         <Animated.View
@@ -54,20 +54,20 @@ const ModalShow = ({ children, visible, setVisible }) => {
   );
 };
 
-export const Modal = ({ visible, setVisible, children, style }) => {
+export const CustomModal = ({ visible, setVisible, children, style }) => {
   return (
     <View style={{ flex: 1 }}>
       <ModalShow visible={visible} setVisible={setVisible}>
         <View style={{ alignItems: 'center' }}>
-          <View style={styles.header}>
+          {/* <View style={styles.header}>
             <TouchableOpacity
               onPress={() => {
                 setVisible(false);
               }}
             >
-              <Icon name="x" color="#000" size={22} />
+              <MaterialIcons name="cancel" size={30} color="#FFF" />
             </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
         <View style={[styles.modalContent, style]}>{children}</View>
       </ModalShow>
