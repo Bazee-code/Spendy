@@ -12,12 +12,10 @@ export const styles = StyleSheet.create({
   },
   input: {
     color: '#667085',
-    borderBottomColor: '#667085',
     borderTopColor: '#FFF',
     borderLeftColor: '#FFF',
     borderRightColor: '#FFF',
     borderWidth: 1,
-    marginBottom: 30,
     fontSize: 20,
   },
   inputTitle: { marginBottom: 10, color: '#080416', fontSize: 16 },
@@ -34,5 +32,12 @@ export const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 18,
     fontWeight: '500',
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 15,
+    fontWeight: '500',
+    marginBottom: 30,
+    marginTop: 5,
   },
 });
